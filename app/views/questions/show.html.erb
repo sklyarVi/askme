@@ -4,11 +4,10 @@
     <p class="mb-sm"><%= @question.body %></p>
     <p>User id: <b><%= @question.user_id%></b> </p>
 
-
-    <p class="mt"><%= link_to "edit", edit_question_path(@question) %></p>
-    <div>
-        <%= button_to  'Delete question', question_path(@question), method: :delete %> 
+    <div class="mt"> 
+        <%= link_to fa_icon('pencil'), edit_question_path(@question), title: 'edit question' %>
+        <%= button_to  fa_icon('trash-o'), question_path(@question), method: :delete, title: 'delete question' %> 
     </div>
 
-    <p class="mt"><%= link_to "All Questions", questions_path %></p>
+    <p class="mt"><%= link_to "All Questions", questions_path , class: "button button-main" %></p>
 </div>
