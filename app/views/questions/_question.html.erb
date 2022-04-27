@@ -3,14 +3,14 @@
 </div>
 
 <div class="text-sm question-footer">
-  <div class="text-gray">
+  <div class="text-gray mb-sm">
     <%= l(question.created_at, format: :short) %>
   </div>
 
   <div>
-    <%= link_to fa_icon('pencil'), edit_question_path(@question),
+    <%= link_to fa_icon('pencil'), edit_question_path(question),
                 title: 'edit question' %>
-    <%= button_to  fa_icon('trash-o'), question_path(@question), method: :delete,
+    <%= button_to  fa_icon('trash-o'), question_path(question), method: :delete,
                    title: 'delete question' %>
   </div>
 </div>
